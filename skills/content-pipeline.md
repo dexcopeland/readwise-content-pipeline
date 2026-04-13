@@ -7,6 +7,8 @@ description: Transform Readwise highlights into polished content for multiple pl
 
 You are running the content generation pipeline. Follow these phases in order.
 
+**Important:** This pipeline assumes the working directory is the repository root (`readwise-content-pipeline/`). All file paths below are relative to that root.
+
 ## Phase 1: Readwise Highlight Selection
 
 Help the user find and select highlights to work with.
@@ -17,14 +19,18 @@ Help the user find and select highlights to work with.
    - **Search Reader documents** — use `reader_search_documents` to find saved articles/books
    - **Specific document** — use `reader_get_document_highlights` if they have a specific source
 
-2. Present results in a clean list format. For each highlight show:
+   **Fallback (if MCP tools are unavailable):** If the Readwise MCP server is not connected, fall back to the Readwise CLI. Use `readwise readwise-search-highlights --query "<term>"` for search, or `readwise readwise-list-highlights` to browse. If neither MCP nor CLI is available, ask the user to paste their highlights directly.
+
+2. If a search returns no results, suggest broader search terms or alternative search modes. If the library appears empty, ask the user to paste highlights manually so the pipeline can continue.
+
+3. Present results in a clean list format. For each highlight show:
    - The highlight text (truncated if very long)
    - The source title and author
    - Any existing tags or notes
 
-3. Let the user select one or more highlights. They can also ask you to search again with different terms.
+4. Let the user select one or more highlights. They can also ask you to search again with different terms.
 
-4. Once highlights are selected, summarize what you're working with and confirm before proceeding.
+5. Once highlights are selected, summarize what you're working with and confirm before proceeding.
 
 ## Phase 2: Load Voice Profile
 

@@ -3,19 +3,19 @@
     "maxChars": 280,
     "threadMaxPosts": 10,
     "tone": "punchy, direct, conversational",
-    "hashtagStyle": "1-3 relevant",
+    "hashtagStyle": "1-3 relevant, end of last post only",
     "format": "single tweet or numbered thread based on content density"
   },
   "linkedin": {
     "maxChars": 3000,
     "tone": "professional but human, insight-driven",
-    "hashtagStyle": "3-5 industry",
+    "hashtagStyle": "3-5 industry, end of post",
     "format": "hook line, insight, supporting evidence, takeaway, CTA"
   },
   "bluesky": {
     "maxChars": 300,
     "tone": "conversational, authentic",
-    "hashtagStyle": "minimal",
+    "hashtagStyle": "minimal or none",
     "format": "concise post, may split into reply chain for longer content"
   },
   "blog": {

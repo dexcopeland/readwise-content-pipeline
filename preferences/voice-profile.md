@@ -2,6 +2,8 @@
 
 This file is updated automatically after each content pipeline run based on user feedback. It captures writing preferences so future drafts better match the user's voice.
 
+**Entry format:** Each entry should include the date, the preference learned, and a concrete before/after example where applicable.
+
 ## Tone
 <!-- e.g., "casual but informed", "avoids corporate jargon", "dry humor" -->
 
@@ -16,3 +18,6 @@ This file is updated automatically after each content pipeline run based on user
 
 ## Feedback History
 <!-- Concrete examples from past feedback rounds. Format: date, original → revised, lesson learned -->
+
+## Run Count
+Count: 0

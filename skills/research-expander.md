@@ -18,7 +18,9 @@ Tell the user what you plan to search for and why.
 
 ## Step 2: Search
 
-Use `WebSearch` to find 2-4 high-quality sources. Prioritize:
+Use `WebSearch` to find 2-4 high-quality sources. If `WebSearch` is unavailable, ask the user to paste relevant URLs, article titles, or search results — or offer to skip this phase entirely (note in the brief: "Research skipped — content based on personal insight and source material only.").
+
+Prioritize:
 - Recent data and statistics (within the last 2-3 years when possible)
 - Named experts, researchers, or recognized publications
 - Specific studies or reports over opinion pieces

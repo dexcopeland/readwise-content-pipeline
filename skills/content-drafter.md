@@ -25,20 +25,22 @@ Before drafting, ensure you have:
 
 ## Platform-Specific Guidelines
 
+Read `config/platforms.json` for current character limits, tone guidelines, and format specs. The guidelines below describe *how* to use each platform — refer to the JSON for exact numbers.
+
 ### Twitter/X
-- **Single tweet**: Use when the insight can land in one punch. 280 chars max. No fluff.
-- **Thread**: Use when the insight needs setup, evidence, and payoff. Number each post (1/, 2/, etc.). First tweet must stand alone as a hook. Last tweet should be a takeaway or call to action. Max 10 tweets.
-- Include 1-3 relevant hashtags at the end of the last post only.
+- **Single tweet**: Use when the insight can land in one punch. No fluff.
+- **Thread**: Use when the insight needs setup, evidence, and payoff. Number each post (1/, 2/, etc.). First tweet must stand alone as a hook. Last tweet should be a takeaway or call to action.
+- Hashtags at the end of the last post only.
 
 ### LinkedIn
 - **Hook line**: First 1-2 lines appear before "see more" — make them count. Use a bold claim, question, or surprising stat.
 - **Body**: Expand the insight with evidence and personal connection. Use line breaks for readability (LinkedIn rewards white space).
 - **Takeaway**: End with a clear insight or lesson.
 - **CTA**: End with a question to drive comments ("What's your experience with this?").
-- 3-5 hashtags at the very end.
+- Hashtags at the very end.
 
 ### Bluesky
-- 300 char limit. Conversational, authentic tone.
+- Conversational, authentic tone.
 - If the content needs more space, plan a reply chain (2-3 posts max).
 - Minimal or no hashtags.
 
@@ -47,7 +49,7 @@ Before drafting, ensure you have:
 - **Intro**: Hook the reader in the first paragraph. State what they'll learn or think about.
 - **Body**: 2-4 sections with subheadings. Mix insight, evidence, and personal experience. Use the research sources here.
 - **Conclusion**: Synthesize the key takeaway. Include a call to action (subscribe, comment, share, try something).
-- 800-2500 words. Use markdown formatting.
+- Use markdown formatting.
 - Include a brief author attribution and source citation section at the end.
 
 ## Output Format

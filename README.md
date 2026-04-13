@@ -28,33 +28,24 @@ cd readwise-content-pipeline
 
 ### 2. Connect Readwise
 
-The pipeline accesses your Readwise library through an MCP (Model Context Protocol) server. The server is already configured in `.claude/settings.json` — you just need to authenticate.
+The pipeline accesses your Readwise library through an MCP (Model Context Protocol) server, with the Readwise CLI available as a fallback.
 
-**Option A: MCP server (recommended)**
+**MCP server (recommended)**
 
-The MCP server is pre-configured to use `mcp-remote` with the Readwise MCP endpoint. When you first start Claude Code in this repo, it will connect to `https://mcp2.readwise.io/mcp` and prompt you to authenticate via your browser.
+The MCP server is pre-configured in `.claude/settings.json` using `mcp-remote` with the Readwise endpoint. When you first start Claude Code in this repo, it will connect to `https://mcp2.readwise.io/mcp` and prompt you to authenticate via your browser.
 
 No additional setup is needed — just start Claude Code and follow the auth prompt.
 
-**Option B: Access token (manual)**
+**Readwise CLI (fallback)**
 
-If you prefer to authenticate with an access token:
-
-1. Get your token from [readwise.io/access_token](https://readwise.io/access_token)
-2. Set it as an environment variable before starting Claude Code:
-
-```bash
-export READWISE_ACCESS_TOKEN=your_token_here
-```
-
-**Option C: Readwise CLI**
-
-If you have the Readwise CLI installed separately, the pipeline can fall back to CLI commands like `readwise readwise-search-highlights`. Install it with:
+If the MCP server is unavailable or you prefer CLI access, install the Readwise CLI:
 
 ```bash
 npm install -g readwise-cli
 readwise login
 ```
+
+The pipeline will automatically fall back to CLI commands (e.g., `readwise readwise-search-highlights`) if MCP tools aren't connected.
 
 ### 3. Run the pipeline
 
@@ -92,14 +83,15 @@ You can also edit this file directly if you want to seed it with known preferenc
 ├── .claude/
 │   ├── settings.json                # MCP server configuration
 │   └── skills/
-│       └── content-pipeline.md      # Skill entry point
+│       └── content-pipeline/
+│           └── SKILL.md             # Skill entry point (delegates to skills/)
 ├── skills/
 │   ├── content-pipeline.md          # Main orchestrator
 │   ├── socratic-interview.md        # Insight extraction through questioning
 │   ├── research-expander.md         # Supporting source discovery
 │   └── content-drafter.md           # Platform-specific draft generation
 ├── config/
-│   └── platforms.json               # Platform format specs
+│   └── platforms.json               # Platform format specs (single source of truth)
 ├── preferences/
 │   └── voice-profile.md             # Learned tone/style (grows with use)
 └── output/                          # Generated drafts
