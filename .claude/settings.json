@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "readwise": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp2.readwise.io/mcp"]
+    }
+  }
+}
