@@ -22,7 +22,7 @@ The pipeline draws out your original thinking through Socratic questioning, find
 ### 1. Clone and enter the repo
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/dexcopeland/readwise-content-pipeline.git
 cd readwise-content-pipeline
 ```
 
